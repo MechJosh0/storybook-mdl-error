@@ -10,7 +10,9 @@ module.exports = function (wallaby) {
       'client/modules/**/components/*.js',
       'client/modules/**/actions/*.js',
       'client/modules/**/containers/*.js',
-      'client/modules/**/libs/*.js'
+      'client/modules/**/libs/*.js',
+      'public/lib/getmdl/material.min.js',
+      // 'public/lib/getmdl/material.min.css'
     ],
     tests: [
       'client/**/tests/*.js'
