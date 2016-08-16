@@ -12,7 +12,9 @@ module.exports = function (wallaby) {
       'client/modules/**/containers/*.js',
       'client/modules/**/libs/*.js',
       'public/lib/getmdl/material.min.js',
-      // 'public/lib/getmdl/material.min.css'
+      'public/lib/getmdl/material.min.css',
+      'css-null-compiler.js',
+      '.scripts/mocha_boot.js'
     ],
     tests: [
       'client/**/tests/*.js'
@@ -29,6 +31,8 @@ module.exports = function (wallaby) {
     testFramework: 'mocha',
     setup: function() {
       global.React = require('react');
+      require('./css-null-compiler');
+      require('./.scripts/mocha_boot.js');
     }
   };
 };
