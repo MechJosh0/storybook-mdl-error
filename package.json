@@ -4,7 +4,7 @@
   "scripts": {
     "lint": "eslint ./lib ./client ./server --ext .js",
     "lintfix": "npm run lint -- --fix",
-    "testonly": "mocha .scripts/mocha_boot.js client/**/tests/**/*.js --compilers js:babel-core/register",
+    "testonly": "mocha .scripts/mocha_boot.js client/**/tests/**/*.js --compilers js:babel-core/register,css:css-null-compiler.js",
     "test": "npm run lint && npm run testonly",
     "test-watch": "npm run testonly -- --watch --watch-extensions js",
     "storybook": "start-storybook -p 9001 -s ./public"

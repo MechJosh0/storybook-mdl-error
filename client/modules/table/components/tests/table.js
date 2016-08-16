@@ -14,6 +14,6 @@ describe('table.components.table', () => {
       <Table />
     );
 
-    expect(el.find('Table').length).to.equal(1);
+    expect(el.find('Table').length).to.equal(2);
   });
 });
